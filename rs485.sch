@@ -6036,6 +6036,46 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="0.616" y="0.75" size="1.27" layer="51">+</text>
 <text x="-1.384" y="0.75" size="1.27" layer="51">-</text>
 </package>
+<package name="1X04-SMD_LONG">
+<wire x1="5.08" y1="1.25" x2="-5.08" y2="1.25" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="1.25" x2="-5.08" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="-1.25" x2="-3.81" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="-1.25" x2="-1.27" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="-1.25" x2="1.27" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="1.27" y1="-1.25" x2="3.81" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="3.81" y1="-1.25" x2="5.08" y2="-1.25" width="0.127" layer="51"/>
+<wire x1="5.08" y1="-1.25" x2="5.08" y2="1.25" width="0.127" layer="51"/>
+<wire x1="3.81" y1="-1.25" x2="3.81" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="1.27" y1="-1.25" x2="1.27" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="-1.25" x2="-1.27" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="-1.25" x2="-3.81" y2="-7.25" width="0.127" layer="51"/>
+<smd name="4" x="3.81" y="5.5" dx="4" dy="1" layer="1" rot="R90"/>
+<smd name="3" x="1.27" y="5.5" dx="4" dy="1" layer="1" rot="R90"/>
+<smd name="2" x="-1.27" y="5.5" dx="4" dy="1" layer="1" rot="R90"/>
+<smd name="1" x="-3.81" y="5.5" dx="4" dy="1" layer="1" rot="R90"/>
+<hole x="-2.54" y="0" drill="1.4"/>
+<hole x="2.54" y="0" drill="1.4"/>
+</package>
+<package name="JST-4-PTH-VERT">
+<wire x1="-4.95" y1="-2.25" x2="-4.95" y2="2.25" width="0.2032" layer="21"/>
+<wire x1="-4.95" y1="2.25" x2="4.95" y2="2.25" width="0.2032" layer="21"/>
+<wire x1="4.95" y1="-2.25" x2="1" y2="-2.25" width="0.2032" layer="21"/>
+<wire x1="-1" y1="-2.25" x2="-4.95" y2="-2.25" width="0.2032" layer="21"/>
+<wire x1="-1" y1="-1.75" x2="1" y2="-1.75" width="0.2032" layer="21"/>
+<wire x1="1" y1="-1.75" x2="1" y2="-2.25" width="0.2032" layer="21"/>
+<wire x1="-1" y1="-1.75" x2="-1" y2="-2.25" width="0.2032" layer="21"/>
+<wire x1="4.95" y1="2.25" x2="4.95" y2="-2.25" width="0.2032" layer="21"/>
+<pad name="1" x="-3" y="-0.55" drill="0.7" diameter="1.6256"/>
+<pad name="2" x="-1" y="-0.55" drill="0.7" diameter="1.6256"/>
+<pad name="3" x="1" y="-0.55" drill="0.7" diameter="1.6256"/>
+<pad name="4" x="3" y="-0.55" drill="0.7" diameter="1.6256"/>
+<text x="-3" y="3" size="0.4064" layer="25">&gt;Name</text>
+<text x="1" y="3" size="0.4064" layer="27">&gt;Value</text>
+<text x="-1.4" y="0.75" size="1.27" layer="51">+</text>
+<text x="0.6" y="0.75" size="1.27" layer="51">-</text>
+<text x="2.7" y="0.95" size="0.8" layer="51">Y</text>
+<text x="-3.3" y="0.95" size="0.8" layer="51">B</text>
+</package>
 </packages>
 <symbols>
 <symbol name="M03">
@@ -6413,7 +6453,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <connect gate="G$1" pin="4" pad="4"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SKU" value="PRT-09916" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SCREW_LOCK" package="SCREWTERMINAL-3.5MM-4_LOCK">
@@ -6439,6 +6481,28 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </technologies>
 </device>
 <device name="SMD_STRAIGHT_COMBO" package="1X04_SMD_STRAIGHT_COMBO">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD_LONG" package="1X04-SMD_LONG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="JST-PTH-VERT" package="JST-4-PTH-VERT">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -6695,10 +6759,8 @@ http://catalog.tycoelectronics.com&lt;br&gt;
 For all RJ11 N and Z Series Models&lt;br&gt;
 Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
 <wire x1="-6.877" y1="10.819" x2="6.877" y2="10.819" width="0.2032" layer="21"/>
-<wire x1="7.8105" y1="-5.51" x2="-7.8105" y2="-5.51" width="0.01" layer="20"/>
-<wire x1="6.877" y1="-7.782" x2="-6.877" y2="-7.782" width="0.2032" layer="21"/>
-<wire x1="-6.877" y1="-7.782" x2="-6.877" y2="10.819" width="0.2032" layer="21"/>
-<wire x1="6.877" y1="10.819" x2="6.877" y2="-7.782" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-5.242" x2="-6.877" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="10.819" x2="6.877" y2="-5.242" width="0.2032" layer="21"/>
 <pad name="4" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
 <pad name="3" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
 <pad name="2" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
@@ -6707,8 +6769,6 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <pad name="6" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
 <text x="-7.62" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
 <text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
-<rectangle x1="6.95" y1="-5.485" x2="7.875" y2="-4.342" layer="21"/>
-<rectangle x1="-7.875" y1="-5.485" x2="-6.95" y2="-4.342" layer="21"/>
 <hole x="-5.08" y="0" drill="3.2512"/>
 <hole x="5.08" y="0" drill="3.2512"/>
 </package>
